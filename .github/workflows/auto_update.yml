@@ -1,0 +1,39 @@
+name: Sincronizar y Transformar Fork Antiguo
+on:
+  workflow_dispatch: # Para que puedas darle al botón cuando quieras
+
+jobs:
+  sync-and-transform:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout mi repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Git
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+
+      - name: Sincronizar con el Original (Upstream)
+        run: |
+          # Añadimos el repo original (el padre de tu fork)
+          REMOTE_URL=$(curl -s https://api.github.com/repos/${{ github.repository }} | jq -r .parent.clone_url)
+          git remote add upstream $REMOTE_URL
+          git fetch upstream
+          # Forzamos que tu rama local sea igual a la del autor original
+          # CUIDADO: Esto igualará tu código al del autor antes de transformar
+          git merge upstream/main --allow-unrelated-histories -m "Sincronizar con original" || echo "Sin cambios"
+          git checkout HEAD transformar.py 
+
+      - name: Ejecutar transformación de palabras
+        run: python transformar.py
+
+      - name: Guardar y Subir cambios
+        run: |
+          git add .
+          git commit -m "Sincronizado con original y aplicada nomenclatura personalizada" || echo "Sin cambios"
+          git push origin main --force
