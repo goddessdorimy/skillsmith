@@ -17,7 +17,7 @@ type: standalone
 version: 0.1.0
 category: operations
 description: One-line description of what this skill does
-allowed-tools: [Read, Write, Glob, Grep, Edit, AskUserQuestion]
+allowed-tools: [Read, Write, Glob, Grep, Edit, Question]
 ---
 ```
 
@@ -30,7 +30,7 @@ allowed-tools: [Read, Write, Glob, Grep, Edit, AskUserQuestion]
 | `version` | Yes | semver | Current version | `0.1.0` |
 | `category` | Yes | string | Domain grouping | `operations`, `content`, `development` |
 | `description` | Yes | string | One-line summary | `Revenue operations expert for offer design and webinar builds` |
-| `allowed-tools` | No | array | Tools this skill may use | `[Read, Write, Bash, AskUserQuestion]` |
+| `allowed-tools` | No | array | Tools this skill may use | `[Read, Write, Bash, Question]` |
 
 ### Skill Types
 

@@ -2,11 +2,11 @@
 
 ## What This Is
 
-A universal framework for creating Claude Code skills — from discovery through deployment. Includes Skillsmith (the meta-skill that builds skills), syntax standards for every file type, and a scaffolding engine that generates compliant skill directories. First deployment targets Extendly Rev-Ops; designed for portable distribution via Skool community, Claude Code Masterclass, YouTube tutorials, and GitHub.
+A universal framework for creating opencode skills — from discovery through deployment. Includes Skillsmith (the meta-skill that builds skills), syntax standards for every file type, and a scaffolding engine that generates compliant skill directories. First deployment targets Extendly Rev-Ops; designed for portable distribution via Skool community, opencode Masterclass, YouTube tutorials, and GitHub.
 
 ## Core Value
 
-Anyone can build consistent, high-quality Claude Code skills in minutes using standardized syntax and automated scaffolding — eliminating ad hoc skill creation.
+Anyone can build consistent, high-quality opencode skills in minutes using standardized syntax and automated scaffolding — eliminating ad hoc skill creation.
 
 ## Current State
 
@@ -36,7 +36,7 @@ Anyone can build consistent, high-quality Claude Code skills in minutes using st
 
 ### Out of Scope
 - Rev-Ops specific content (that's the first consumer, not the framework)
-- Runtime execution engine (skills are static markdown, Claude executes them)
+- Runtime execution engine (skills are static markdown, opencode executes them)
 
 ## Target Users
 
@@ -45,7 +45,7 @@ Anyone can build consistent, high-quality Claude Code skills in minutes using st
 - Need consistency across skills built by different people
 - Want fast scaffolding, not manual template copying
 
-**Secondary:** Claude Code power users (Skool community, course students)
+**Secondary:** opencode power users (Skool community, course students)
 - Building their own skills for various domains
 - Need clear standards and a starting point
 - May not have seen well-structured skills before
@@ -59,15 +59,15 @@ Anyone can build consistent, high-quality Claude Code skills in minutes using st
 
 **Technical Context:**
 - Syntax patterns derived from PAUL framework `src/` (commands, workflows, templates, references, rules)
-- Skills deploy to `.claude/commands/` (local, not committed) from `skills/` (git-tracked shared library)
-- No runtime dependencies — pure markdown consumed by Claude Code
+- Skills deploy to `.opencode/commands/` (local, not committed) from `skills/` (git-tracked shared library)
+- No runtime dependencies — pure markdown consumed by opencode
 
 ## Constraints
 
 ### Technical Constraints
-- Must work within Claude Code's slash command system
+- Must work within opencode's slash command system
 - Skills are markdown files — no custom parsers or tooling required
-- Must be compatible with `.claude/commands/` directory structure
+- Must be compatible with `.opencode/commands/` directory structure
 
 ### Business Constraints
 - Framework must be domain-agnostic (not tied to Rev-Ops)
@@ -102,15 +102,15 @@ Anyone can build consistent, high-quality Claude Code skills in minutes using st
 | Layer | Technology | Notes |
 |-------|------------|-------|
 | Format | Markdown + XML + YAML frontmatter | Same as PAUL |
-| Execution | Claude Code slash commands | No custom runtime |
-| Storage | `skills/` (tracked) → `.claude/commands/` (local) | |
+| Execution | opencode slash commands | No custom runtime |
+| Storage | `skills/` (tracked) → `.opencode/commands/` (local) | |
 
 ## Links
 
 | Resource | URL |
 |----------|-----|
 | Planning Doc | projects/skill-framework/PLANNING.md |
-| PAUL Reference | apps/paul-framework/src/ |
+| PAUL Reference | apps/paul-framework-opencode/src/ |
 
 ---
 *Created: 2026-03-04*

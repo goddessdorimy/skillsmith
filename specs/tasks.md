@@ -336,7 +336,7 @@ Show it to them.
 |-------------|-------------|-----|
 | No `<user-story>` | Task has no clear beneficiary or outcome | Always define who benefits and what they get |
 | Unnamed steps | Can't reference, skip, or debug specific steps | Always use `<step name="snake_case">` |
-| "Make it good" instructions | Vague — Claude will interpret differently each time | Be specific: "Keep under 150 words", "Include 3 options" |
+| "Make it good" instructions | Vague — opencode will interpret differently each time | Be specific: "Keep under 150 words", "Include 3 options" |
 | No wait points | Task races through without user input | Add explicit "Wait for response" signals |
 | BDD acceptance criteria | Over-formal for skill context, adds friction | Use plain checklists: `- [ ] Specific criterion` |
 | Monolithic task | Single task trying to do everything | Split into focused tasks, each with one concern |

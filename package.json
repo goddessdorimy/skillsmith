@@ -1,7 +1,7 @@
 {
   "name": "@chrisai/skillsmith",
   "version": "0.1.0",
-  "description": "Build consistent Claude Code skills using standardized syntax and guided workflows",
+  "description": "Build consistent opencode skills using standardized syntax and guided workflows",
   "bin": {
     "skillsmith": "bin/install.js"
   },
@@ -13,8 +13,8 @@
     "terminal.svg"
   ],
   "keywords": [
-    "claude",
-    "claude-code",
+    "opencode",
+    "opencode-code",
     "ai",
     "skills",
     "scaffolding",

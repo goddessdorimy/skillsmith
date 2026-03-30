@@ -114,7 +114,7 @@ type: {skill-type}
 version: 0.1.0
 category: {category}
 description: {description}
-allowed-tools: [Read, Write, Glob, Grep, Edit, AskUserQuestion]
+allowed-tools: [Read, Write, Glob, Grep, Edit, Question]
 ---
 ```
 
@@ -261,7 +261,7 @@ For skills with 10+ total files, offer PAUL-managed build.
 
    c. If PAUL is available (installed or just installed):
       - Copy the SKILL-SPEC.md into the project directory as reference
-      - Run `/paul:init` in the project directory
+      - Run `/paul-init` in the project directory
       - Pass the skill spec as context — PAUL should derive milestones and phases from the spec's content architecture WITHOUT asking the user questions it can answer from the spec
       - Suggest phase structure based on skill anatomy:
         - Phase 1: Entry point + directory structure
@@ -270,7 +270,7 @@ For skills with 10+ total files, offer PAUL-managed build.
         - Phase 4: Checklists + validation
         - Phase 5: Integration testing (install as command, test invocation)
       - After PAUL init completes, report:
-        > "PAUL initialized. Run `/paul:plan` to start Phase 1."
+        > "PAUL initialized. Run `/paul-plan` to start Phase 1."
       - **STOP HERE** — do not continue to validate_and_report. PAUL manages the rest.
 </step>
 
@@ -343,7 +343,7 @@ Created in the current working directory or user-specified path.
 - [ ] Generated files contain meaningful scaffolded content (not empty placeholders)
 - [ ] If 10+ files: user offered PAUL-managed build option
 - [ ] If PAUL chosen and not installed: user prompted to install globally
-- [ ] If PAUL path: paul:init completed with spec as context, phases proposed
+- [ ] If PAUL path: paul-init completed with spec as context, phases proposed
 - [ ] If non-PAUL path: validation report shows all files pass rules
 - [ ] User informed of results and next steps
 </acceptance-criteria>

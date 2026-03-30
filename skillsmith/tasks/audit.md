@@ -47,7 +47,7 @@ Determine what to audit.
 3. Confirm: "Auditing `{skill-name}` at `{path}`. Proceed?"
 
 **Batch mode:**
-1. Ask for the parent directory path (e.g., `~/.claude/skills/` or `~/.claude/commands/`)
+1. Ask for the parent directory path (e.g., `~/.opencode/skills/` or `~/.opencode/commands/`)
 2. Discover all subdirectories that appear to be skills (contain `.md` files)
 3. List discovered skills and confirm: "Found {N} skills. Audit all?"
 

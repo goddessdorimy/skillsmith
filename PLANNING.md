@@ -9,11 +9,11 @@
 
 ## Overview
 
-A universal framework for creating Claude Code skills — from discovery through deployment. The framework includes a meta-skill (the skill that builds skills), syntax standards for every file type, and a scaffolding engine that generates compliant skill directories.
+A universal framework for creating opencode skills — from discovery through deployment. The framework includes a meta-skill (the skill that builds skills), syntax standards for every file type, and a scaffolding engine that generates compliant skill directories.
 
 **First deployment:** Extendly Rev-Ops team (Chris + Zach), where skills power revenue operations workflows — webinar builds, offer design, copy frameworks, etc.
 
-**Broader vision:** This framework is designed to be portable. It's not bound to Rev-Ops or Extendly. The syntax standards, skill types, and meta-skill are generic enough to share with the Skool community, use in courses (Claude Code Masterclass), and distribute as a standalone tool for anyone building Claude Code skills. The Rev-Ops implementation is the proving ground — once validated there, the framework gets extracted and packaged for distribution.
+**Broader vision:** This framework is designed to be portable. It's not bound to Rev-Ops or Extendly. The syntax standards, skill types, and meta-skill are generic enough to share with the Skool community, use in courses (opencode Masterclass), and distribute as a standalone tool for anyone building opencode skills. The Rev-Ops implementation is the proving ground — once validated there, the framework gets extracted and packaged for distribution.
 
 ---
 
@@ -63,7 +63,7 @@ skills/{skill-name}/
 ### Deployment Model
 
 - **`skills/`** — Git-tracked shared library. Source of truth. Team pushes here.
-- **`.claude/commands/`** — Local deploy target. Not committed. Copy from `skills/` to use.
+- **`.opencode/commands/`** — Local deploy target. Not committed. Copy from `skills/` to use.
 
 ---
 
@@ -164,7 +164,7 @@ Generate the complete skill directory based on the spec.
 |----------|--------|-----------|
 | Acceptance criteria format | User Stories + checklists (not BDD) | Skills serve revenue/content work, not software. User stories are natural. |
 | Cross-file syntax consistency | Same type = same syntax across all skills | Predictability. A `tasks/*.md` file should look the same whether it's in Expert Secrets or a brand new skill. |
-| Skill location | `skills/` (tracked) → copy to `.claude/commands/` (local) | Team needs shared library; `.claude/` isn't committed. |
+| Skill location | `skills/` (tracked) → copy to `.opencode/commands/` (local) | Team needs shared library; `.opencode/` isn't committed. |
 | Rules folder scope | Meta-skill only (not every skill) | Individual skills follow the standards; they don't need to carry the rulebook. |
 | Inspired by | PAUL framework `src/` patterns | XML sections, step-based workflows, folder-specific rules, placeholder conventions. Adapted for non-dev context. |
 
@@ -188,8 +188,8 @@ Once the framework is proven in Rev-Ops:
 2. **Package** as a standalone skill framework (no Extendly-specific content)
 3. **Channels:**
    - Skool community (free resource for VIP members)
-   - Claude Code Masterclass (course module)
-   - YouTube (tutorial content — "How to Build Claude Code Skills That Scale")
+   - opencode Masterclass (course module)
+   - YouTube (tutorial content — "How to Build opencode Skills That Scale")
    - GitHub (open template repo)
 
 This is Chris AI Systems IP, not Extendly IP. The Rev-Ops deployment is the first customer.

@@ -90,7 +90,7 @@ All 7 specs in `specs/`:
 
 Last session: 2026-03-17
 Stopped at: v0.1 milestone complete
-Next action: /paul:complete-milestone or /paul:milestone for next milestone
+Next action: /paul-complete-milestone or /paul-milestone for next milestone
 Resume file: .paul/ROADMAP.md
 
 ---

@@ -43,7 +43,7 @@ Tasks do NOT use YAML frontmatter. Content starts with `<purpose>`.
 | Pattern | Why It's Wrong |
 |---------|---------------|
 | Unnamed steps | Can't reference, skip, or debug specific steps |
-| Vague instructions ("make it good") | Claude interprets differently each time — be specific |
+| Vague instructions ("make it good") | opencode interprets differently each time — be specific |
 | No wait points | Task races through without user input |
 | BDD acceptance criteria (Given/When/Then) | Skills use plain checklists — BDD is for PAUL plans |
 | Monolithic task | Split into focused tasks, each with one concern |

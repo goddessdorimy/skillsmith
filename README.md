@@ -6,9 +6,9 @@
 
 # Skillsmith
 
-**Build consistent Claude Code skills using standardized syntax and guided workflows.**
+**Build consistent opencode skills using standardized syntax and guided workflows.**
 
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-8b5cf6?style=flat-square)](https://claude.ai/code)
+[![opencode](https://img.shields.io/badge/opencode%20Code-compatible-8b5cf6?style=flat-square)](https://opencode.ai/code)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
 </div>
@@ -30,7 +30,7 @@
 
 ## What Skillsmith Does
 
-Claude Code skills are markdown files that give Claude a persona, routing logic, and domain knowledge. They're powerful — but there's no standard for how to write them. Every skill looks different. Entry points mix routing with process logic. Tasks miss required sections. Templates use inconsistent placeholders. When you share a skill, someone else has to reverse-engineer your conventions.
+opencode skills are markdown files that give opencode a persona, routing logic, and domain knowledge. They're powerful — but there's no standard for how to write them. Every skill looks different. Entry points mix routing with process logic. Tasks miss required sections. Templates use inconsistent placeholders. When you share a skill, someone else has to reverse-engineer your conventions.
 
 Skillsmith fixes this. It's a meta-skill — a skill that builds other skills — with four workflows:
 
@@ -57,11 +57,11 @@ The result: skills that are consistent, portable, and immediately understandable
 
 ## The Problem
 
-Claude Code's slash command system is a superpower. Drop markdown files in `.claude/commands/` and Claude gets new capabilities — personas, workflows, domain knowledge, quality gates. But there's no enforced structure. Skills built without conventions end up with:
+opencode's slash command system is a superpower. Drop markdown files in `.opencode/commands/` and opencode gets new capabilities — personas, workflows, domain knowledge, quality gates. But there's no enforced structure. Skills built without conventions end up with:
 
-- **Entry points doing too much.** Routing mixed with process logic. Bloated files that Claude loads entirely even when you only need one command.
+- **Entry points doing too much.** Routing mixed with process logic. Bloated files that opencode loads entirely even when you only need one command.
 - **Inconsistent file types.** Tasks that look like frameworks. Templates without placeholder conventions. Context files that never get updated.
-- **Missing sections.** No acceptance criteria. No user stories. No "Not For" boundaries. Claude interprets vaguely and produces inconsistent results.
+- **Missing sections.** No acceptance criteria. No user stories. No "Not For" boundaries. opencode interprets vaguely and produces inconsistent results.
 - **No portability.** Your skill works in your workspace because you know the conventions. Someone else installs it and gets confused immediately.
 
 Skillsmith defines seven file types — entry points, tasks, templates, frameworks, context, checklists, and rules — each with a syntax spec. The specs define what sections are required, what format they use, and what anti-patterns to avoid. Then it gives you workflows to build skills that follow those specs from the start.
@@ -175,7 +175,7 @@ skillsmith/
 ```
 
 **Two layers by design:**
-- **`skillsmith/`** — The operational skill. Tasks, rules, templates. This is what Claude loads and executes.
+- **`skillsmith/`** — The operational skill. Tasks, rules, templates. This is what opencode loads and executes.
 - **`specs/`** — Reference documentation. The syntax specifications that define how each file type should be written. Tasks and audits reference these on-demand — they're never loaded upfront.
 
 Rules vs Specs: Rules are compact enforcement checklists ("must have X, anti-pattern Y"). Specs are the full documentation ("here's what X means, here's why, here are examples"). The audit task loads rules for fast checking. The scaffold task loads specs for correct generation.
@@ -217,7 +217,7 @@ Every skill built with Skillsmith uses consistent placeholders:
 
 ## Ecosystem
 
-Skillsmith is part of a broader Claude Code extension ecosystem:
+Skillsmith is part of a broader opencode extension ecosystem:
 
 | System | What It Does | Link |
 |--------|-------------|------|
@@ -239,7 +239,7 @@ All tools are standalone. SEED was built with Skillsmith. Scaffold can optionall
 npx @chrisai/skillsmith
 ```
 
-One command. Installs the skill to `~/.claude/commands/skillsmith/` — available in every workspace.
+One command. Installs the skill to `~/.opencode/commands/skillsmith/` — available in every workspace.
 
 ```bash
 # Global install (default) — available everywhere
@@ -248,16 +248,16 @@ npx @chrisai/skillsmith
 # Install to current project only
 npx @chrisai/skillsmith --local
 
-# Custom Claude config directory
-npx @chrisai/skillsmith --config-dir /path/to/.claude
+# Custom opencode config directory
+npx @chrisai/skillsmith --config-dir /path/to/.opencode
 ```
 
-Then open Claude Code and type `/skillsmith` to start.
+Then open opencode and type `/skillsmith` to start.
 
 ### What Gets Installed
 
 ```
-~/.claude/
+~/.opencode/
 ├── commands/skillsmith/
 │   ├── skillsmith.md        Entry point (routing + persona)
 │   ├── tasks/               4 task files (discover, scaffold, distill, audit)
@@ -271,7 +271,7 @@ No hooks, no MCP servers, no workspace data. Skillsmith is pure markdown — zer
 
 ### Requirements
 
-- [Claude Code](https://claude.ai/code)
+- [opencode](https://opencode.ai/code)
 - Node.js >= 16 (for install script only — Skillsmith itself has no runtime deps)
 
 ---
